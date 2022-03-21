@@ -9,13 +9,40 @@ public class MyFirstJavaProgram {
 		
     	// This code makes a new Robot
     	Robot rob = new Robot();
-
-        // PEN.  Put the robot's pen down so it can draw, Use this command:
-		 /**     rob.penDown();    **/
-
-        // SPEED. Make the robot move quickly. Use this command:
-		  /**     rob.setSpeed();    **/
- 
+    	rob.setSpeed(6);
+    	rob.penDown();
+    	rob.setRandomPenColor();
+    	//rob.move(100);
+    	//rob.turn(225);
+    	//rob.move(150);
+    	//rob.turn(220);
+    	//rob.move(100);
+    	
+    	int count_2 = 0;
+    	
+    	while (count_2 < 8) {
+    		rob.move(100);
+        	rob.turn(45);
+        	count_2 +=1; 
+       
+    	}
+      
+    	
+    	rob.move(100);
+    	rob.turn(90);
+    	rob.move(100);
+    	rob.turn(90);
+    	rob.move(100);
+    	rob.turn(90);
+    	rob.move(100);
+    	
+    	int count = 0; 
+    
+    	while (count < 4) {
+    		rob.move(100);
+    		rob.turn(90);
+    		count +=1 ;
+    	}
     	// COUNT. Create an int variable that will count how many sides of the square we have drawn.
     	//        The start value will be zero because no sides have yet been drawn. Use this code:
 		  /**     int count = 0;    **/

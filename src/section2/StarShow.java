@@ -13,17 +13,30 @@ public class StarShow {
 	Robot batman = new Robot("batman");
 	
 	void makeStars() {
-		
+		drawStar(150);
 		// This code will draw one star whose size is 150 pixels per side....
 		// but first you have to write some code. Find the drawStar() method and 
 		// write the code to draw a star.
-		drawStar(150);
+		batman.setSpeed(100);
+		int x = batman.getX();
+		x = 10;
+		int y = batman.getY();
+		y = 600;
+		int starSize = 25;
+		int starCount = 0;
+		while(starCount < 7) {
+			batman.setPenWidth(starCount);
+			batman.setX(x);
+			batman.setY(y);
+			drawStar(starSize);
+			x += starSize;
+			y -= starSize;
+			starSize += 20;
+			batman.turn(12);
+			batman.setRandomPenColor();
+			starCount +=1;
+		}
 		
-		// Run the program. Check that your star is the same as the first picture in the recipe.
-		// Remove the drawStar(150) from the program before you proceed.
-		
-		// Set the robot speed to 100
-
 		// Make a variable to hold the X position of the Robot and set it to 10
 
 		// Make a variable to hold the Y position of the Robot and set it to 600
@@ -59,11 +72,17 @@ public class StarShow {
 		// End the while loop here
 
 		// Run the program. Check that your star looks like the picture in the recipe.
-	}
+}
 
 	private void drawStar(int starSize) {
 		// Put the robot's pen down
-
+		batman.penDown();
+		int lines = 0; 
+		while(lines < 5) {
+			batman.move(starSize);
+			batman.turn(144);
+			lines +=1;
+		}
     	// COUNT. Create an int variable that will count how many lines of the star we have drawn.
     	//        The start value will be zero because no lines have yet been drawn. Use this code:
 		  /**     int lines = 0;    **/

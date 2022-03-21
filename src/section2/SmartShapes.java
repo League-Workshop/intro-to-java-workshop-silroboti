@@ -5,7 +5,17 @@ import org.jointheleague.graphical.robot.Robot;
 public class SmartShapes {
 	
     public static void main(String[] args) throws Exception {
-        // Make a new Robot
+       Robot robo = new Robot();
+       robo.penDown();
+       robo.setSpeed(200);
+       int sides = 0;
+       
+       while(sides < 4) {
+    	   robo.move(200);
+    	   robo.turn(90);
+    	   sides +=1;
+    	 
+       }
 
 
         // Put the robot's pen down
