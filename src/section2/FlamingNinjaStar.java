@@ -18,7 +18,12 @@ public class FlamingNinjaStar {
 			rob.turn(45);
 			rob.move(64);
 			rob.move(-40);
-			rob.move(flameSize);
+			rob.move(flameSize); 
+			rob.turn(170);
+			rob.move(flamesize);
+			rob.turn(64);
+			rob.move(baseSize); 
+			count +=1
 		}
 
 		// Set the robot speed to 100
